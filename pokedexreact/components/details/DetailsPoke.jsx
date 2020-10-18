@@ -61,5 +61,4 @@ const DetailsPoke = ({pokeType, pokeinfo}) => {
       </Container>
     );
 }
-
 export default DetailsPoke;
