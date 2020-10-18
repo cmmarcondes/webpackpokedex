@@ -19,7 +19,7 @@ after that you need to <b>build</b> the application:
 
 then you start the application:
 
-<i>npm start</i>
+<i>npm run dev</i>
 
 
 # USAGE
@@ -30,8 +30,6 @@ then you start the application:
 ### we give you two options of searching:
 
 #### first of them: name or id - here you just need to write the name or the id of a pokemon you wanna search, for example you can just type "1" without the quotation marks
-
-<br />
 
 #### second is the ability of any pokemon - you just need to type the id of the ability you wanna search
 
