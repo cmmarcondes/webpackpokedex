@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -p",
+    "start": "webpack -p --config ./webpack.prod.config.js --progress",
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "prod": "git push origin master"
