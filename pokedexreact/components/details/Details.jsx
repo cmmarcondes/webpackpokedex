@@ -24,7 +24,6 @@ const Details = () => {
       return (pokeType = type.type.name);
     });
   }
-
   return (
     <>
       <Header detailsPage={true} name={pokeinfo.name} />
