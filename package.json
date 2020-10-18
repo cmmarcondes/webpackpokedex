@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "serve -s build",
+    "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "prod": "git push origin master"
   },
