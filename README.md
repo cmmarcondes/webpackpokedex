@@ -82,7 +82,7 @@ We deployed the app at Heroku, and you can access by clicking -> <a href="https:
 
 
 
-### ⚒️ Tecnologias
+### Tecnologias
 
 - [Webpack](https://webpack.js.org/)
 - [Reactjs](https://pt-br.reactjs.org/)
