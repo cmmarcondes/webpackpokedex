@@ -40,7 +40,6 @@ const Rules = () => {
         
     }
     const getPage = (e) =>{
-        console.log(e)
         if(e === '8'){
             setPostsPerPage(93)
             setCurrentPage(e*100);

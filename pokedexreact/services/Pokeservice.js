@@ -1,5 +1,4 @@
 import api from "../Api";
-
 class PokeService {
   constructor() {
     throw new Error("Esta classe não pode ser instanciada");

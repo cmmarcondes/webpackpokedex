@@ -3,8 +3,8 @@ import { BoxContainer, Text } from "./styles";
 
 const Box = ({ pokeinfos, idImage }) => {
   const getParams = (method, name) => {
-    {localStorage.setItem('method', method)}
-      {localStorage.setItem('name', name)}
+    localStorage.setItem('method', method)
+    localStorage.setItem('name', name)
   }
   return (
     <BoxContainer

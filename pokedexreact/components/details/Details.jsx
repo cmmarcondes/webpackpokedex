@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import PokeService from '../../services/Pokeservice'
+import PokeService from '../../services/Pokeservice';
+import { useParams } from 'react-router-dom';
 import Header from "../header/Header";
 import Loader from '../loader/Loader'
 import Notfound from "../notfound/Notfound";
@@ -11,8 +11,8 @@ const Details = () => {
   const [pokeinfo, setPokeinfo] = useState([]);
   const [loader, setLoader] = useState(true);
   const { method, name } = useParams();
-
   let pokeType = "";
+  
   const getPokeInfo = useCallback(async () => {
     const PokeData = await PokeService.getPoke(null, method, name);
         setPokeinfo(PokeData.data);
@@ -21,7 +21,7 @@ const Details = () => {
 
   useEffect(() => {
     getPokeInfo();
-  }, [Details]);
+  }, [getPokeInfo]);
 
   if (pokeinfo.types !== undefined) {
     pokeinfo.types.map((type) => {
