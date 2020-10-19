@@ -7,8 +7,12 @@ const app = express();
 app.use(express.static(__dirname + '/dist'));
 
 // send the user to index html page inspite of the url
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
-});
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, './dist/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 app.listen(port);
