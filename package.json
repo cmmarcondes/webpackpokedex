@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engine":{
+  "engine": {
     "node": "12.18.2"
   },
   "scripts": {
-    "start": "webpack --config webpack.prod.js",
+    "start": "serve -s build",
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "prod": "git push origin master"
@@ -41,6 +41,7 @@
     "react-dom": "^16.14.0",
     "react-hot-loader": "^4.13.0",
     "react-route": "^1.0.3",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "serve": "^11.3.2"
   }
 }
