@@ -18,6 +18,7 @@ export const Input = styled.input`
 padding: 20px;
 margin: 20px;
 width: 350px;
+height: 20px;
 border-radius: 6px;
 border: none;
 font-family: sans-serif;
@@ -31,6 +32,7 @@ outline: none;
 
 export const Select = styled.select`
 padding: 20px;
+height: 20px;
 margin: 20px;
 width: 150px;
 border: none;
@@ -49,7 +51,7 @@ font-size: 20px;
 
 export const Text = styled.h3`
 letter-spacing: 2px;
-font-size: 26px;
+font-size: 32px;
 font-weight: lighter;
 `;
 

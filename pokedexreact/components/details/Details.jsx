@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
-import PokeService from '../../services/Pokeservice';
-import { useParams } from 'react-router-dom';
+import PokeService from "../../services/Pokeservice";
+import { useParams } from "react-router-dom";
 import Header from "../header/Header";
-import Loader from '../loader/Loader'
+import Loader from "../loader/Loader";
 import Notfound from "../notfound/Notfound";
 import DetailsAbility from "./DetailsAbility";
 import DetailsPoke from "./DetailsPoke";
@@ -12,15 +12,18 @@ const Details = () => {
   const [loader, setLoader] = useState(true);
   const { method, name } = useParams();
   let pokeType = "";
-  
+
   const getPokeInfo = useCallback(async () => {
     const PokeData = await PokeService.getPoke(null, method, name);
-        setPokeinfo(PokeData.data);
-        setLoader(false); 
+    setLoader(false);
+    setPokeinfo(PokeData.data);
   }, [name, method]);
 
   useEffect(() => {
     getPokeInfo();
+    setInterval(()=>{
+      setLoader(false)
+    }, 500)
   }, [getPokeInfo]);
 
   if (pokeinfo.types !== undefined) {
@@ -30,26 +33,26 @@ const Details = () => {
   }
   return (
     <>
-    {
-      loader ? 
-      <Loader />
-      :
-      <>
-{
-      pokeinfo.name ? <Header detailsPage={true} name={pokeinfo.name} /> : <Header notfoundpage={true} />
-    }
       {
-        pokeinfo.name ? (
-          method === "pokemon" ? (
+        loader ? <Loader /> :
+        <>
+        {pokeinfo.name ? (
+        <>
+          <Header detailsPage={true} name={pokeinfo.name} />
+          {method === "pokemon" ? (
             <DetailsPoke pokeType={pokeType} pokeinfo={pokeinfo} />
           ) : (
             <DetailsAbility abilityinfo={pokeinfo} />
-          )
-        ) : 
-        <Notfound />
+          )}
+        </>
+      ) : (
+        <>
+          <Header notfoundpage={true} />
+          <Notfound />
+        </>
+      )}
+        </>
       }
-      </>
-    }
     </>
   );
 };
