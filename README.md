@@ -45,7 +45,7 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 
 
 
-# Usage
+### Usage
 
 
 🚀 we give you two options of searching:
@@ -64,11 +64,11 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 
 ### Features
 
-- [x] Pesquisa com id
-- [x] Pesquisa com nome
-- [x] Pesquisa por habilidade
-- [x] Página com os detalhes dos pokemons
-- [x] Página que lista todos os pokemons
+- ✔️ Pesquisa com id
+- ✔️ Pesquisa com nome
+- ✔️ Pesquisa por habilidade
+- ✔️ Página com os detalhes dos pokemons
+- ✔️ Página que lista todos os pokemons
 
 
 
@@ -78,7 +78,7 @@ We deployed the app at Heroku, and you can access by clicking -> <a href="https:
 
 
 
-### Tecnologias
+### ⚒️ Tecnologias
 
 - [Webpack](https://webpack.js.org/)
 - [Reactjs](https://pt-br.reactjs.org/)
