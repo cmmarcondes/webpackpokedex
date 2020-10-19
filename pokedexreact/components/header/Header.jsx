@@ -1,11 +1,20 @@
 import React from 'react';
 import {Navbar, Input, Select, Option, Text, Button} from './styles';
 
-const Header = ({getSelectValue, getInputValue, inputPlaceHolder, detailsPage, name}) => {
+const Header = ({getSelectValue, getInputValue, inputPlaceHolder, detailsPage, name, notfoundpage}) => {
 
     return(
         <>
-        {detailsPage ?
+        {
+            notfoundpage ? <Navbar detailpage>
+                <Text>
+                    Who is this pokemon?
+                </Text>
+                <Button to="/">Back</Button>
+            </Navbar>
+            :
+            (
+                detailsPage ?
         <Navbar detailpage>
             <Text>
             Welcome to <b>{name}'s</b> page, here you can see all his details
@@ -20,10 +29,10 @@ const Header = ({getSelectValue, getInputValue, inputPlaceHolder, detailsPage, n
             <Option value={'name'}>name or id</Option>
             <Option value={'ability'}>ability</Option>
         </Select>
-        {inputPlaceHolder !== "" ? <Input placeholder={`Pokemon's ${inputPlaceHolder}`} onChange={(e) => getInputValue(e.target.value)} /> : false}
+        {inputPlaceHolder !== "" ? ( inputPlaceHolder === 'ability' ? <Input placeholder={`Pokemon's ${inputPlaceHolder}`} onChange={(e) => getInputValue(e.target.value)} type="number" /> : <Input placeholder={`Pokemon's ${inputPlaceHolder}`} onChange={(e) => getInputValue(e.target.value)} /> ) : false}
         </Navbar>
-    }
-        
+            )
+        }        
         </>
     );
 }

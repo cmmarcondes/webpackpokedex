@@ -74,6 +74,10 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 ✔️ Página com os detalhes dos pokemons
 <br />
 ✔️ Página que lista todos os pokemons
+<br />
+🚧 Link na página pokemon que redireciona p/ ability clicada
+<br />
+🚧 Link na página ability que redireciona p/ pokemon clicado
 
 
 
