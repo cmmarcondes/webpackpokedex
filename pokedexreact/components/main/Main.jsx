@@ -42,13 +42,12 @@ const Rules = () => {
         window.scrollTo(0,0)
     }
 
-    const getInputValue = debounce(async(e) => {
+    const getInputValue = (e) => {
         if(e){
             history.push(`${selectValue}/${e}`) 
         }else{
             getPokemons()
-        }    
-        }, 1000);
+        }};
 
     const pokeControl = pokeinfos.map((infos)=>{
         return <Box key={infos.name} pokeinfos={infos} selectValue={selectValue} />
