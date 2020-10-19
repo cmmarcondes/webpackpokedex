@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "12.18.2"
-  },
   "scripts": {
-    "start": "webpack -p --config webpack.prod.js --progress",
+    "start": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "prod": "git push origin master"
