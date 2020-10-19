@@ -21,24 +21,24 @@
 ### Quick-install
 
 Before we start, be sure you have installed Node and Git on your pc, if you havent, you can download node by clicking <a href="https://nodejs.org/en/" target="_blank">here</a> and Git clicking <a href="https://git-scm.com" target="_blank">here</a>.
+<br />
 <i>quick note: would be great if you have <a href="https://code.visualstudio.com/" target="_blank">VsCode</a> installed too, its a great tool that will help you a lot</i>
 
 🎲 First thing: open your command-line and navigate to the folder you wanna clone the repo
 
 <b>Cloning the repo</b>
-
+<br />
 <i>$ git clone https://github.com/carlosmagnofcamara/webpackpokedex.git</i>
 
 <i>$ cd webpackpokedex</i>
 
 🎲 The second thing we should do is to install all node dependencies.
-
-<b>Installing all dependencies</b>:
-
+<b>Installing all dependencies:</b>
+<br />
 <i>$ npm install</i>
 
 <b>then you start the application:</b>
-
+<br />
 <i>$ npm run dev</i>
 
 <i>quick note: your app will run at localhost:8080</i>
@@ -48,13 +48,14 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 # Usage
 
 
-## we give you two options of searching:
+🚀 we give you two options of searching:
 
-### first of them: name or id - here you just need to write the name or the id of a pokemon you wanna search, for example you can just type "1" without the quotation marks
+✨ first of them: name or id - here you just need to write the name or the id of a pokemon you wanna search, for example you can just type "1" without the quotation marks
 
-### second is the ability of any pokemon - you just need to type the id of the ability you wanna search
+✨ second is the ability of any pokemon - you just need to type the id of the ability you wanna search
 
-### if you click in any pokemon box you will get all his details too :)
+✨ if you click in any pokemon box you will get all his details too :)
+
 
 <i>note: we use debounce on our input and use 1000 ms delay. You just need to type the pokemon you want and then wait 1 sec for the debounce works and get you your pokemon</i> <a href="https://www.npmjs.com/package/lodash.debounce" target="_blank">More details here</a>
 
