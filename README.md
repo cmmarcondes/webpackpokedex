@@ -26,6 +26,7 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 🎲 First thing: open your command-line and navigate to the folder you wanna clone the repo
 
 <b>Cloning the repo</b>
+
 <i>$ git clone https://github.com/carlosmagnofcamara/webpackpokedex.git</i>
 
 <i>$ cd webpackpokedex</i>
@@ -33,9 +34,11 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 🎲 The second thing we should do is to install all node dependencies.
 
 <b>Installing all dependencies</b>:
+
 <i>$ npm install</i>
 
 <b>then you start the application:</b>
+
 <i>$ npm run dev</i>
 
 <i>quick note: your app will run at localhost:8080</i>
