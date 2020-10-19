@@ -12,8 +12,7 @@
  <a href="#Demo">Demo</a> • 
  <a href="#Tecnologias">Tecnologias</a> • 
  <a href="#Considerações">Considerações</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
+ <a href="#Licença">Licença</a>
 </p>
 
 
@@ -22,7 +21,7 @@
 ### Quick-install
 
 Before we start, be sure you have installed Node and Git on your pc, if you havent, you can download node by clicking <a href="https://nodejs.org/en/">here</a> and Git clicking <a href="https://git-scm.com">here</a>.
-<i>quick note: would be great if you have <a href="https://code.visualstudio.com/">VsCode</a> installed too, its a great tool that will help you a lot<i>
+<i>quick note: would be great if you have <a href="https://code.visualstudio.com/">VsCode</a> installed too, its a great tool that will help you a lot</i>
 
 🎲 First thing: open your command-line and navigate to the folder you wanna clone the repo
 
