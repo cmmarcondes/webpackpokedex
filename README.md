@@ -65,9 +65,13 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 ### Features
 
 ✔️ Pesquisa com id
+<br />
 ✔️ Pesquisa com nome
+<br />
 ✔️ Pesquisa por habilidade
+<br />
 ✔️ Página com os detalhes dos pokemons
+<br />
 ✔️ Página que lista todos os pokemons
 
 
