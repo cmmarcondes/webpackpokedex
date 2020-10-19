@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Input, Select, Option, Text, Button } from "./styles";
+import { Navbar, Input, Select, Option, Text, Button, SearchButton } from "./styles";
 
 const Header = ({
   getSelectValue,
@@ -41,7 +41,7 @@ const Header = ({
                 onChange={(e) => setInputValue(e.target.value)}
                 type="number"
               />
-              <Button onClick={()=> getInputValue(inputValue)}>Search</Button>
+              <SearchButton onClick={()=> getInputValue(inputValue)}>Search</SearchButton>
               </>
             ) : (
                 <>
@@ -49,7 +49,7 @@ const Header = ({
                 placeholder={`Pokemon's ${inputPlaceHolder}`}
                 onChange={(e) => setInputValue(e.target.value)}
               />
-              <Button onClick={()=> getInputValue(inputValue)}>Search</Button>
+              <SearchButton onClick={()=> getInputValue(inputValue)}>Search</SearchButton>
               </>
             )
           ) : (

@@ -74,3 +74,23 @@ export const Button = styled(Link)`
 background-color: #FF4242;
 color:white;
 `;
+
+export const SearchButton = styled.button`
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    &:hover {
+        background-color: ${props=> props.paginate ? '#9448BC' : '#FF99C8' };
+        border: none;
+        color: white;
+    }
+background-color: #FF4242;
+color:white;
+`;
