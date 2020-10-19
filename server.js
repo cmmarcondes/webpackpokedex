@@ -7,7 +7,7 @@ process.env.PWD = process.cwd();
 app.use(express.static(process.env.PWD + '/dist'));
 
 app.get('*', function (req, res) {
-  const index = path.join(process.env.PWD, '/dist/index.html');
+  const index = path.join(process.env.PWD, '/public/index.html');
   res.sendFile(index);
 });
 
