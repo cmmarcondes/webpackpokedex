@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import Details from './components/details/Details';
-import { BrowserRouter, Switch, Route } from "react-router-dom"; 
+import { BrowserRouter, Switch, Route, HashRouter } from "react-router-dom"; 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
         <Route path="/:method/:name" component={Details} />
         <Route path="/" exact component={App} />
     </Switch>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
 

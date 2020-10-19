@@ -10,19 +10,22 @@ const Header = ({
   notfoundpage,
 }) => {
     const [inputValue, setInputValue] = useState(0);
+    const removeLocalStorage = () => {
+      localStorage.clear();
+    }
   return (
     <>
       {notfoundpage ? (
         <Navbar detailpage>
           <Text>Who is this pokemon?</Text>
-          <Button to="/">Back</Button>
+          <Button to="/" onClick={()=> removeLocalStorage()}>Back</Button>
         </Navbar>
       ) : detailsPage ? (
         <Navbar detailpage>
           <Text>
             Welcome to <b>{name}'s</b> page, here you can see all his details
           </Text>
-          <Button to="/">Back</Button>
+          <Button to="/" onClick={()=> removeLocalStorage()}>Back</Button>
         </Navbar>
       ) : (
         <Navbar>

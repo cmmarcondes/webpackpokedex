@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "webpack -p",
-    "dev": "webpack-dev-server --open --mode development",
+    "dev": "webpack-dev-server --config webpack.config.js --hot --inline",
     "build": "webpack --mode production",
     "prod": "git push origin master"
   },
