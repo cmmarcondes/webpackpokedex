@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engine":{
+    "node": "12.18.2"
+  },
   "scripts": {
     "start": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open --mode development",
