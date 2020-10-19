@@ -33,6 +33,7 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 <i>$ cd webpackpokedex</i>
 
 🎲 The second thing we should do is to install all node dependencies.
+<br />
 <b>Installing all dependencies:</b>
 <br />
 <i>$ npm install</i>
