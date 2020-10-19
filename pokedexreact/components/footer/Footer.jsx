@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Button} from './styles';
 
 const Header = ({totalPages, getPage}) => {
-    for(let i = 0; i <= 9; i++){
+    for(let i = 0; i <= 8; i++){
         totalPages.push(i)
     }
     const pagesControl = totalPages.map((page)=>{

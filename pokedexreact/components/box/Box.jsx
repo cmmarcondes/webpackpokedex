@@ -1,40 +1,19 @@
-import React, { Fragment, useCallback, useEffect, useState } from "react";
-import api from "../../Api";
+import React from "react";
 import { BoxContainer, Text } from "./styles";
 
-const Box = ({ pokeinfos, selectValue }) => {
-  const [pokeinfo, setPokeinfo] = useState([]);
-  let pokeType = "";
-  const getPokeInfos = useCallback(async () => {
-    await api.get(pokeinfos.url).then((res) => {
-      setPokeinfo([res.data]);
-    });
-  }, [pokeinfos.url]);
-  useEffect(() => {
-    getPokeInfos();
-  }, [getPokeInfos]);
-
-  const pokeControl = pokeinfo.map((infos) => {
-    return (
-      <Fragment key={infos.id}>
-        {infos.types !== undefined
-          ? infos.types.map((type) => {
-            (pokeType = infos.types[0].type.name)
-          })
-          : false}
-        <Text>{infos.name}</Text>
-        <img src={infos.sprites.front_default} alt="img" />
-      </Fragment>
-    );
-  });
+const Box = ({ pokeinfos, idImage }) => {
+  const getParams = (method, name) => {
+    {localStorage.setItem('method', method)}
+      {localStorage.setItem('name', name)}
+  }
   return (
     <BoxContainer
       to={{ pathname: `/pokemon/${pokeinfos.name}` }}
-      poketype={pokeType}
+      onClick={() => getParams('pokemon', pokeinfos.name)}
     >
-      {pokeControl}
+       <Text>{pokeinfos.name}</Text>
+       <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idImage}.png`} alt="img" width="100" height="100" />
     </BoxContainer>
   );
-};
-
+  }
 export default Box;

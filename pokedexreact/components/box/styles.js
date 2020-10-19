@@ -31,7 +31,8 @@ export const BoxContainer = styled(Link)`
     justify-content: center;
     align-items: center;
     box-shadow: 0px 1px 8px 1px gray;
-    background: ${props => Object.entries(types).map((e)=> props.poketype === e[0] ? colortype1 = e[1] : "white") ? colortype1 : 'pink'};
+    background-color: pink;
+    //background: ${props => Object.entries(types).map((e)=> props.poketype === e[0] ? colortype1 = e[1] : "white") ? colortype1 : 'pink'};
     border-radius: 8px;
     margin: 20px;
     padding: 10px;
@@ -48,5 +49,5 @@ font-weight: bolder;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 text-shadow: 2px 2px 5px blue;
 color: white;
-
+margin: 10px;
 `;

@@ -5,21 +5,23 @@ import Box from '../box/Box';
 import {Container} from './styled';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import debounce from 'lodash.debounce';
 import { useHistory } from 'react-router-dom';
+import Loader from '../loader/Loader';
 
 const Rules = () => {
     const [pokeinfos, setPokeinfos] = useState([]);
     const [selectValue, setSelectValue] = useState('');
     const [inputPH, setInputPH] = useState('');
+    const [loader, setLoader] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
-    const [postsPerPage] = useState(100);
+    const [postsPerPage, setPostsPerPage] = useState(100);
     let totalPages = [];
     const history = useHistory();
 
     const getPokemons = useCallback(async() => {
         await api.get(`pokemon?limit=${postsPerPage}&offset=${currentPage}/`).then((res)=>{
             setPokeinfos(res.data.results);
+            setLoader(false)
         });
     }, [currentPage, postsPerPage]);
 
@@ -38,7 +40,14 @@ const Rules = () => {
         
     }
     const getPage = (e) =>{
-        setCurrentPage(e*100);
+        console.log(e)
+        if(e === '8'){
+            setPostsPerPage(93)
+            setCurrentPage(e*100);
+        }else{
+            setPostsPerPage(100);
+            setCurrentPage(e*100);
+        }
         window.scrollTo(0,0)
     }
 
@@ -49,17 +58,23 @@ const Rules = () => {
             getPokemons()
         }};
 
-    const pokeControl = pokeinfos.map((infos)=>{
-        return <Box key={infos.name} pokeinfos={infos} selectValue={selectValue} />
+    const pokeControl = pokeinfos.map((infos, index)=>{
+        return <Box key={infos.name} pokeinfos={infos} selectValue={selectValue} idImage={index+1+currentPage} />
     })
 
     return(
         <>
-        <Container>
-        <Header getSelectValue={getSelectValue} getInputValue={getInputValue} inputPlaceHolder={inputPH}/>
-        {pokeControl}
-        </Container>
-        <Footer totalPages={totalPages} getPage={getPage} />
+{
+    loader ? <Loader /> : 
+    <>
+    <Container>
+    <Header getSelectValue={getSelectValue} getInputValue={getInputValue} inputPlaceHolder={inputPH}/>
+    {pokeControl}
+    </Container>
+    <Footer totalPages={totalPages} getPage={getPage} />
+    </>
+}
+        
         </>
     );
 }

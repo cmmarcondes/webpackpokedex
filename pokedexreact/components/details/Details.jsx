@@ -1,26 +1,28 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import api from "../../Api";
+import PokeService from '../../services/Pokeservice'
 import Header from "../header/Header";
+import Loader from '../loader/Loader'
 import Notfound from "../notfound/Notfound";
 import DetailsAbility from "./DetailsAbility";
 import DetailsPoke from "./DetailsPoke";
 
 const Details = () => {
   const [pokeinfo, setPokeinfo] = useState([]);
+  const [loader, setLoader] = useState(true);
   const { method, name } = useParams();
 
   let pokeType = "";
   const getPokeInfo = useCallback(async () => {
-    await api.get(`${method}/${name}`).then((res) => {
-        setPokeinfo(res.data)
-    });
+    const PokeData = await PokeService.getPoke(null, method, name);
+        setPokeinfo(PokeData.data);
+        setLoader(false); 
   }, [name, method]);
 
   useEffect(() => {
     getPokeInfo();
-  }, [getPokeInfo]);
-  
+  }, [Details]);
+
   if (pokeinfo.types !== undefined) {
     pokeinfo.types.map((type) => {
       return (pokeType = type.type.name);
@@ -29,9 +31,13 @@ const Details = () => {
   return (
     <>
     {
+      loader ? 
+      <Loader />
+      :
+      <>
+{
       pokeinfo.name ? <Header detailsPage={true} name={pokeinfo.name} /> : <Header notfoundpage={true} />
     }
-      
       {
         pokeinfo.name ? (
           method === "pokemon" ? (
@@ -42,7 +48,10 @@ const Details = () => {
         ) : 
         <Notfound />
       }
-      {}
+      </>
+    }
+    
+
     </>
   );
 };
