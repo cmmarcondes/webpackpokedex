@@ -64,11 +64,11 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 
 ### Features
 
-- ✔️ Pesquisa com id
-- ✔️ Pesquisa com nome
-- ✔️ Pesquisa por habilidade
-- ✔️ Página com os detalhes dos pokemons
-- ✔️ Página que lista todos os pokemons
+✔️ Pesquisa com id
+✔️ Pesquisa com nome
+✔️ Pesquisa por habilidade
+✔️ Página com os detalhes dos pokemons
+✔️ Página que lista todos os pokemons
 
 
 
