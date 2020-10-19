@@ -1,8 +1,8 @@
 <h1 align="center">WebpackPokedex</h1>
 
-<p align="center">we used <a href="pokeapi.co">pokeapi.co</a> to get all data of pokemons and display it as you search or as you roll between pages</p>
+<p align="center">we used <a href="pokeapi.co" target="_blank">pokeapi.co</a> to get all data of pokemons and display it as you search or as you roll between pages</p>
 <h1 align="center">
-    <a href="https://pt-br.reactjs.org/">🔗 WEBPACK WITH REACT</a>
+    <a href="https://pt-br.reactjs.org/" target="_blank">🔗REACT</a>
 </h1>
 
 <p align="center">
@@ -20,8 +20,8 @@
 
 ### Quick-install
 
-Before we start, be sure you have installed Node and Git on your pc, if you havent, you can download node by clicking <a href="https://nodejs.org/en/">here</a> and Git clicking <a href="https://git-scm.com">here</a>.
-<i>quick note: would be great if you have <a href="https://code.visualstudio.com/">VsCode</a> installed too, its a great tool that will help you a lot</i>
+Before we start, be sure you have installed Node and Git on your pc, if you havent, you can download node by clicking <a href="https://nodejs.org/en/" target="_blank">here</a> and Git clicking <a href="https://git-scm.com" target="_blank">here</a>.
+<i>quick note: would be great if you have <a href="https://code.visualstudio.com/" target="_blank">VsCode</a> installed too, its a great tool that will help you a lot</i>
 
 🎲 First thing: open your command-line and navigate to the folder you wanna clone the repo
 
@@ -53,7 +53,7 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 
 ### if you click in any pokemon box you will get all his details too :)
 
-<i>note: we use debounce on our input and use 1000 ms delay. You just need to type the pokemon you want and then wait 1 sec for the debounce works and get you your pokemon</i> <a href="https://www.npmjs.com/package/lodash.debounce">More details here</a>
+<i>note: we use debounce on our input and use 1000 ms delay. You just need to type the pokemon you want and then wait 1 sec for the debounce works and get you your pokemon</i> <a href="https://www.npmjs.com/package/lodash.debounce" target="_blank">More details here</a>
 
 
 
@@ -70,7 +70,7 @@ Before we start, be sure you have installed Node and Git on your pc, if you have
 
 ### Demo
 
-We deployed the app at Heroku, and you can access by clicking -> <a href="https://webpackpokedex.herokuapp.com/">https://webpackpokedex.herokuapp.com/ </a>
+We deployed the app at Heroku, and you can access by clicking -> <a href="https://webpackpokedex.herokuapp.com/" target="_blank">https://webpackpokedex.herokuapp.com/ </a>
 
 
 
